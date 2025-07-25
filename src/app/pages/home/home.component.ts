@@ -7,8 +7,8 @@ import { CarruselComponent } from "../../components/carrusel/carrusel.component"
   standalone: true,
   imports: [BannerComponent, CarruselComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
- mostrarBanner = true;
+  mostrarBanner = true;
 }

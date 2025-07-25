@@ -1,0 +1,8 @@
+.product-info div {
+  margin-bottom: 0.25rem;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+}

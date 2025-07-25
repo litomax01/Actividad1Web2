@@ -1,20 +1,21 @@
-<div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition">
+<div
+  class="product-card max-w-xs bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition p-4 flex flex-col items-center"
+>
   <img
-    class="rounded-t-lg mx-auto mt-4 w-36 h-36 object-cover"
-    [src]="producto.imagen"
+    class="w-36 h-36 object-cover rounded-lg mb-4"
+    [src]="'assets/' + producto.imagen"
     [alt]="producto.nombre"
   />
-  <div class="p-5">
-    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900">
-      {{ producto.nombre }}
-    </h5>
-    <p class="mb-3 font-normal text-gray-700">
-      {{ producto.descripcion }}
-    </p>
-    <span
-      class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-lg rounded-full"
-    >
-      ${{ producto.precio }}
-    </span>
+  <div class="product-info w-full text-gray-700 space-y-1">
+    <div><strong>Código:</strong> {{ producto.id }}</div>
+    <div><strong>Nombre:</strong> {{ producto.nombre }}</div>
+    <div><strong>Precio:</strong> ${{ producto.precio }}</div>
+    <div><strong>Cantidad:</strong> {{ producto.cantidad }}</div>
   </div>
+  <button
+    type="button"
+    class="product-button mt-4 bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700 transition w-full max-w-[200px]"
+  >
+    Comprar
+  </button>
 </div>
