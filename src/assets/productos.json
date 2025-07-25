@@ -1,61 +1,61 @@
 [
   {
     "nombre": "Laptop HP Pavilion 15",
-    "imagen": "/assets/img/laptop-hp.jpg",
+    "imagen": "assets/images/laptop-hp.jpg",
     "precio": 850,
     "descripcion": "Laptop HP Pavilion 15, Intel Core i5, 8GB RAM, 512GB SSD."
   },
   {
     "nombre": "Monitor Samsung 24\"",
-    "imagen": "/assets/img/monitor-samsung.jpg",
+    "imagen": "assets/images/monitor-samsung.jpg",
     "precio": 220,
     "descripcion": "Monitor Samsung de 24 pulgadas Full HD con panel IPS."
   },
   {
     "nombre": "Teclado Mecánico Logitech G213",
-    "imagen": "/assets/img/teclado-logitech.jpg",
+    "imagen": "assets/images/teclado-logitech.jpg",
     "precio": 70,
     "descripcion": "Teclado mecánico con retroiluminación RGB y resistencia a salpicaduras."
   },
   {
     "nombre": "Mouse Inalámbrico Logitech M185",
-    "imagen": "/assets/img/mouse-logitech.jpg",
+    "imagen": "assets/images/mouse-logitech.jpg",
     "precio": 25,
     "descripcion": "Mouse inalámbrico compacto y cómodo, ideal para viajes."
   },
   {
     "nombre": "PC Gamer AMD Ryzen 7",
-    "imagen": "/assets/img/pc-gamer.jpg",
+    "imagen": "assets/images/pc-gamer.jpg",
     "precio": 1250,
     "descripcion": "PC Gamer con procesador AMD Ryzen 7, 16GB RAM, RTX 3060."
   },
   {
     "nombre": "Impresora Multifuncional Epson EcoTank",
-    "imagen": "/assets/img/impresora-epson.jpg",
+    "imagen": "assets/images/monitor-samsung.jpg",
     "precio": 180,
     "descripcion": "Impresora multifuncional, bajo costo de tinta, ideal para oficinas."
   },
   {
     "nombre": "Disco Duro Externo Seagate 1TB",
-    "imagen": "/assets/img/disco-duro-seagate.jpg",
+    "imagen": "assets/images/teclado-logitech.jpg",
     "precio": 55,
     "descripcion": "Disco duro externo portátil, 1TB, USB 3.0, compatible con PC y Mac."
   },
   {
     "nombre": "Cámara Web Logitech C270",
-    "imagen": "/assets/img/camara-web.jpg",
+    "imagen": "assets/images/pc-gamer.jpg",
     "precio": 35,
     "descripcion": "Cámara web HD para videollamadas, fácil de instalar."
   },
   {
     "nombre": "Auriculares Redragon H120",
-    "imagen": "/assets/img/auriculares-redragon.jpg",
+    "imagen": "assets/images/monitor-samsung.jpg",
     "precio": 40,
     "descripcion": "Auriculares para gaming con micrófono ajustable y sonido estéreo."
   },
   {
     "nombre": "Tablet Lenovo Tab M10",
-    "imagen": "/assets/img/tablet-lenovo.jpg",
+    "imagen": "assets/images/mouse-logitech.jpg",
     "precio": 200,
     "descripcion": "Tablet Lenovo de 10.1 pulgadas, 4GB RAM, 64GB de almacenamiento."
   }

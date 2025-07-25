@@ -1,10 +1,26 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4">
-  <div *ngFor="let producto of productos" class="product-card">
-    <img [src]="producto.imagen" alt="Imagen del producto" />
-    <div class="product-info"><strong>Código:</strong> {{ producto.id }}</div>
-    <div class="product-info"><strong>Nombre:</strong> {{ producto.nombre }}</div>
-    <div class="product-info"><strong>Precio:</strong> ${{ producto.precio }}</div>
-    <div class="product-info"><strong>Cantidad:</strong> {{ producto.cantidad }}</div>
-    <button type="button" class="product-button">Comprar</button>
-  </div>
+<div class="relative overflow-x-auto">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th scope="col" class="px-6 py-3">ID</th>
+        <th scope="col" class="px-6 py-3">Producto</th>
+        <th scope="col" class="px-6 py-3">Precio</th>
+        <th scope="col" class="px-6 py-3">Cantidad</th>
+        <th scope="col" class="px-6 py-3">Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos; trackBy: trackById">
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          {{ producto.id }}
+        </th>
+        <td class="px-6 py-4">{{ producto.nombre }}</td>
+        <td class="px-6 py-4">{{ producto.precio | currency:'USD':'symbol':'1.2-2' }}</td>
+        <td class="px-6 py-4">{{ producto.cantidad }}</td>
+        <td class="px-6 py-4">
+          <img [src]="producto.imagen" alt="Imagen del producto" class="w-16 h-16 object-cover rounded" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

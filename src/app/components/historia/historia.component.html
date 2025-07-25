@@ -1,58 +1,93 @@
-<section class="bg-white py-16 px-6 md:px-20">
-  <div class="max-w-6xl mx-auto text-center">
-    <h1 class="text-4xl font-bold text-blue-700 mb-6">Sobre Nosotros</h1>
-    <p class="text-gray-700 text-lg mb-10">
-      En <span class="font-semibold text-blue-600">Supermercado</span> nos dedicamos a brindar productos de alta calidad
-      con un servicio cálido y responsable. Nuestra misión es convertirnos en tu lugar de compras de confianza.
-    </p>
+<section class="bg-gray-50 py-20 px-8">
+  <div class="max-w-7xl mx-auto">
 
-    <!-- Sección Misión, Visión, Valores -->
-    <div class="grid md:grid-cols-3 gap-8 text-left mb-16">
-      <div class="bg-blue-50 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-blue-700 mb-2">Nuestra Historia</h3>
-        <p class="text-gray-600">Fundado en 2020, iniciamos como un pequeño negocio familiar con el sueño de crecer junto a nuestra comunidad.</p>
-      </div>
-      <div class="bg-blue-50 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-blue-700 mb-2">Nuestra Misión</h3>
-        <p class="text-gray-600">Ofrecer productos esenciales con calidad y confianza, enfocándonos en el servicio al cliente.</p>
-      </div>
-      <div class="bg-blue-50 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-blue-700 mb-2">Nuestros Valores</h3>
-        <p class="text-gray-600">Honestidad, compromiso, responsabilidad y mejora continua son los pilares de nuestro equipo.</p>
-      </div>
-    </div>
+    <!-- Encabezado -->
+    <header class="text-center mb-16">
+      <h1 class="text-5xl font-extrabold text-gray-900 mb-4">Potencia tu Mundo Digital</h1>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Descubre las últimas innovaciones en computación y hardware. Equipos de alto rendimiento para profesionales y gamers exigentes.
+      </p>
+    </header>
 
-    <!-- Sección Equipo -->
-    <h2 class="text-3xl font-bold text-blue-700 mb-8">Nuestro Equipo</h2>
-    <div class="grid md:grid-cols-3 gap-10 mb-16">
-      <div class="text-center">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-32 h-32 mx-auto rounded-full mb-4 shadow-md" alt="Equipo 1">
-        <h3 class="text-lg font-semibold text-blue-600">María López</h3>
-        <p class="text-gray-500 text-sm">Gerente General</p>
+    <!-- Sección de Innovación -->
+    <section class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div>
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Computadora moderna" class="rounded-lg shadow-lg" />
       </div>
-      <div class="text-center">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-32 h-32 mx-auto rounded-full mb-4 shadow-md" alt="Equipo 2">
-        <h3 class="text-lg font-semibold text-blue-600">Carlos Pérez</h3>
-        <p class="text-gray-500 text-sm">Encargado de Inventario</p>
+      <div>
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Innovación en cada componente</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Desde procesadores ultrarrápidos hasta tarjetas gráficas de última generación, cada pieza que ofrecemos está diseñada para superar los límites de la tecnología actual.
+        </p>
+        <ul class="list-disc list-inside mt-6 text-gray-700">
+          <li>Procesadores Intel y AMD con tecnología avanzada.</li>
+          <li>Monitores 4K con alta tasa de refresco para experiencias fluidas.</li>
+          <li>Periféricos ergonómicos para largas horas de trabajo y juego.</li>
+        </ul>
       </div>
-      <div class="text-center">
-        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-32 h-32 mx-auto rounded-full mb-4 shadow-md" alt="Equipo 3">
-        <h3 class="text-lg font-semibold text-blue-600">Ana Torres</h3>
-        <p class="text-gray-500 text-sm">Atención al Cliente</p>
-      </div>
-    </div>
+    </section>
 
-    <!-- Sección Testimonios -->
-    <h2 class="text-3xl font-bold text-blue-700 mb-8">Lo que dicen nuestros clientes</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white border border-blue-100 p-6 rounded-lg shadow-sm">
-        <p class="text-gray-700 italic mb-3">"Siempre encuentro lo que necesito y el personal es muy amable. ¡Mi tienda favorita!"</p>
-        <span class="font-semibold text-blue-600">— Laura G.</span>
+    <!-- Sección Productos Destacados -->
+    <section class="mb-24">
+      <h2 class="text-4xl font-bold text-center mb-12">Equipos Destacados</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1587202372775-404784dbf46f?auto=format&fit=crop&w=400&q=80" alt="Laptop gaming" class="rounded-md mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Laptop Gaming Xtreme</h3>
+          <p class="text-gray-600 mb-4">Potencia y velocidad para los gamers más exigentes.</p>
+          <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Ver más</button>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="PC escritorio" class="rounded-md mb-4" />
+          <h3 class="text-xl font-semibold mb-2">PC de Escritorio Pro</h3>
+          <p class="text-gray-600 mb-4">Ideal para profesionales de diseño y edición.</p>
+          <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Ver más</button>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Monitor 4K" class="rounded-md mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Monitor Ultra HD 4K</h3>
+          <p class="text-gray-600 mb-4">Calidad visual inigualable para cada detalle.</p>
+          <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Ver más</button>
+        </div>
       </div>
-      <div class="bg-white border border-blue-100 p-6 rounded-lg shadow-sm">
-        <p class="text-gray-700 italic mb-3">"Muy buena atención, precios accesibles y productos frescos. ¡100% recomendado!"</p>
-        <span class="font-semibold text-blue-600">— Pedro M.</span>
+    </section>
+
+    <!-- Sección Equipo Técnico -->
+    <section class="mb-20">
+      <h2 class="text-4xl font-bold text-center mb-12">Conoce a Nuestro Equipo Técnico</h2>
+      <div class="flex flex-wrap justify-center gap-12">
+        <div class="text-center max-w-xs">
+          <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Técnico 1" class="mx-auto rounded-full w-32 h-32 mb-4 shadow-lg" />
+          <h3 class="text-xl font-semibold mb-1">Javier Ramírez</h3>
+          <p class="text-gray-700">Especialista en hardware</p>
+        </div>
+        <div class="text-center max-w-xs">
+          <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Técnica 2" class="mx-auto rounded-full w-32 h-32 mb-4 shadow-lg" />
+          <h3 class="text-xl font-semibold mb-1">Claudia Fernández</h3>
+          <p class="text-gray-700">Ingeniera de software</p>
+        </div>
+        <div class="text-center max-w-xs">
+          <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Técnico 3" class="mx-auto rounded-full w-32 h-32 mb-4 shadow-lg" />
+          <h3 class="text-xl font-semibold mb-1">Ricardo López</h3>
+          <p class="text-gray-700">Soporte técnico</p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Sección Opiniones Clientes -->
+    <section>
+      <h2 class="text-4xl font-bold text-center mb-12">Opiniones de Nuestros Clientes</h2>
+      <div class="max-w-4xl mx-auto space-y-8">
+        <blockquote class="bg-white p-8 rounded-lg shadow-md italic text-gray-800">
+          "El equipo que compré supera todas mis expectativas, rendimiento increíble y diseño impecable."
+          <footer class="mt-4 text-right font-semibold">— Luis Gómez</footer>
+        </blockquote>
+        <blockquote class="bg-white p-8 rounded-lg shadow-md italic text-gray-800">
+          "La atención y soporte técnico fueron excelentes, resolvieron todas mis dudas rápidamente."
+          <footer class="mt-4 text-right font-semibold">— Mariana Rivas</footer>
+        </blockquote>
+      </div>
+    </section>
+
   </div>
 </section>

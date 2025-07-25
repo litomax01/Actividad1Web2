@@ -1,23 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Producto } from './producto';
 import { HttpClient } from '@angular/common/http';
-import { CommonModule, CurrencyPipe } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-lista-productos',
   standalone: true,
   imports: [CommonModule],
-  providers: [CurrencyPipe],
   templateUrl: './lista-productos.component.html',
   styleUrls: ['./lista-productos.component.css']
 })
-export class ListaProductosComponent {
+export class ListaProductosComponent implements OnInit {
   products: Producto[] = [];
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<Producto[]>('assets/products.json').subscribe(producto => {
-      this.products = producto;
+    this.http.get<Producto[]>('assets/productos.json').subscribe({
+      next: (data) => {
+        this.products = data;
+      },
+      error: (err) => {
+        console.error('Error cargando productos:', err);
+      }
     });
+  }
+
+  trackById(index: number, producto: Producto): number {
+    return producto.id;
   }
 }

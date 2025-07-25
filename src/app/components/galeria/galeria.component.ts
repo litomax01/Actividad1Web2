@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Producto } from '../lista-productos/producto';
-import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,13 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./galeria.component.css']
 })
 export class GaleriaComponent {
-  productos: Producto[] = [];
+  @Input() productos: Producto[] = [];
 
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-    this.http.get<Producto[]>('assets/products.json').subscribe(producto => {
-      this.productos = producto;
-    });
+  trackById(index: number, producto: Producto): number {
+    return producto.id;
   }
 }
