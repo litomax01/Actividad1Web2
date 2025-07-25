@@ -1,21 +1,8 @@
-<div
-  class="product-card max-w-xs bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition p-4 flex flex-col items-center"
->
-  <img
-    class="w-36 h-36 object-cover rounded-lg mb-4"
-    [src]="'assets/' + producto.imagen"
-    [alt]="producto.nombre"
-  />
-  <div class="product-info w-full text-gray-700 space-y-1">
-    <div><strong>Código:</strong> {{ producto.id }}</div>
-    <div><strong>Nombre:</strong> {{ producto.nombre }}</div>
-    <div><strong>Precio:</strong> ${{ producto.precio }}</div>
-    <div><strong>Cantidad:</strong> {{ producto.cantidad }}</div>
-  </div>
-  <button
-    type="button"
-    class="product-button mt-4 bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700 transition w-full max-w-[200px]"
-  >
-    Comprar
-  </button>
+<div class="product-card">
+  <img [src]="producto.imagen" alt="Imagen del producto" />
+  <div class="product-info"><strong>Código:</strong> {{ producto.id }}</div>
+  <div class="product-info"><strong>Nombre:</strong> {{ producto.nombre }}</div>
+  <div class="product-info"><strong>Precio:</strong> ${{ producto.precio }}</div>
+  <div class="product-info"><strong>Cantidad:</strong> {{ producto.cantidad }}</div>
+  <button type="button" class="product-button">Comprar</button>
 </div>

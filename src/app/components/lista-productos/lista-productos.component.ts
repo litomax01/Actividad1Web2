@@ -1,28 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Producto } from './producto';
 import { HttpClient } from '@angular/common/http';
-import { CardProductComponent, Producto } from '../card-product/card-product.component';
-import { CommonModule } from '@angular/common';
-
+import { CommonModule, CurrencyPipe } from '@angular/common'; 
 @Component({
   selector: 'app-lista-productos',
   standalone: true,
-  imports: [CommonModule, CardProductComponent],
+  imports: [CommonModule],
+  providers: [CurrencyPipe],
   templateUrl: './lista-productos.component.html',
   styleUrls: ['./lista-productos.component.css']
 })
-export class ListaProductosComponent implements OnInit {
-  productos: Producto[] = [];
+export class ListaProductosComponent {
+  products: Producto[] = [];
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<Producto[]>('assets/productos.json').subscribe({
-      next: (data) => {
-        this.productos = data;
-      },
-      error: (err) => {
-        console.error('Error cargando productos:', err);
-      }
+    this.http.get<Producto[]>('assets/products.json').subscribe(producto => {
+      this.products = producto;
     });
   }
 }
