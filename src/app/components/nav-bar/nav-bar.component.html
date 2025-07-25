@@ -1,0 +1,29 @@
+<nav class="bg-blue-700 px-4 py-3 mb-4 shadow-lg rounded-xl">
+  <div class="flex justify-between items-center max-w-7xl mx-auto">
+    <span class="text-2xl font-bold text-white">Mi Galería</span>
+    <ul class="flex gap-6">
+      <li>
+        <a
+          routerLink="/home"
+          routerLinkActive="text-yellow-300 underline"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="text-white text-lg transition hover:text-yellow-200"
+        >Home</a>
+      </li>
+      <li>
+        <a
+          routerLink="/nosotros"
+          routerLinkActive="text-yellow-300 underline"
+          class="text-white text-lg transition hover:text-yellow-200"
+        >Nosotros</a>
+      </li>
+      <li>
+        <a
+          routerLink="/productos"
+          routerLinkActive="text-yellow-300 underline"
+          class="text-white text-lg transition hover:text-yellow-200"
+        >Productos</a>
+      </li>
+    </ul>
+  </div>
+</nav>

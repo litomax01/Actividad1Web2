@@ -1,9 +1,0 @@
-<h2>Galería de Computadoras y Accesorios</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 16px;">
-  <div *ngFor="let p of productos" style="border:1px solid #ccc; border-radius:8px; padding:16px; width:200px; text-align:center;">
-    <img [src]="p.imagen" [alt]="p.nombre" style="width:100px; height:100px; object-fit:cover; margin-bottom:8px;">
-    <h3>{{ p.nombre }}</h3>
-    <p>{{ p.descripcion }}</p>
-    <strong>Precio: ${{ p.precio }}</strong>
-  </div>
-</div>
