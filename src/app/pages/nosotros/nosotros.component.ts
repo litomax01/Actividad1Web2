@@ -6,7 +6,7 @@ import { FooterComponent } from "../../components/footer/footer.component";
 @Component({
   selector: 'app-nosotros',
   standalone: true,
-  imports: [ HistoriaComponent, NavbarComponent, FooterComponent],
+  imports: [ HistoriaComponent],
   templateUrl: './nosotros.component.html',
   styleUrl: './nosotros.component.css'
 })

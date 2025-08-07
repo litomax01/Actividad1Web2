@@ -29,7 +29,10 @@ export class LoginComponent {
         .subscribe(users => {
           if (users.length > 0) {
             localStorage.setItem('user', JSON.stringify(users[0]));
-            this.router.navigate(['/home']);
+            alert('Logueado con éxito');
+            this.router.navigate(['/home']).then(() => {
+              window.location.reload();
+            });
           } else {
             this.error = 'Credenciales incorrectas';
           }

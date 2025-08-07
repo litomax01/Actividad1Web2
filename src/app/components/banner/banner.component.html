@@ -1,18 +1,46 @@
-<section
-  class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white rounded-3xl shadow-2xl max-w-7xl mx-auto p-10 flex flex-col md:flex-row items-center justify-between gap-8 transform transition-transform hover:scale-105"
->
-  <div class="max-w-xl">
-    <h2 class="text-4xl font-extrabold mb-4 tracking-wide drop-shadow-xl">
-      🚀 ¡No te pierdas nuestras ofertas exclusivas!
-    </h2>
-    <p class="text-lg opacity-90 leading-relaxed">
-      Tecnología de vanguardia con descuentos especiales solo por tiempo limitado. ¡Actualiza tu equipo hoy!
-    </p>
+<div class="relative bg-gradient-to-r from-blue-900 via-violet-800 to-cyan-600 rounded-2xl shadow-2xl my-8 px-8 py-12 overflow-hidden border-4 border-cyan-300/20">
+  <!-- Efecto de fondo animado -->
+  <div class="absolute inset-0 pointer-events-none z-0">
+    <div class="absolute -left-16 -top-16 w-72 h-72 bg-cyan-300/40 rounded-full blur-2xl animate-pulse"></div>
+    <div class="absolute -right-16 -bottom-12 w-72 h-72 bg-lime-300/40 rounded-full blur-2xl animate-pulse"></div>
   </div>
-  <button
-    class="bg-white text-gradient bg-clip-text font-extrabold py-4 px-12 rounded-full shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-pink-400 transition-transform duration-300"
-    aria-label="Ver ofertas"
-  >
-    Explorar ofertas
-  </button>
-</section>
+  
+  <!-- Contenido principal -->
+  <div class="relative z-10 flex flex-col items-start gap-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-1 drop-shadow-2xl animate-bounce">
+      ¡Bienvenido a <span class="text-lime-300">Mi Galería Gamer</span>!
+    </h2>
+    <p class="text-lg md:text-xl text-cyan-100">
+      🖥️ Más de <b class="text-lime-300">100 equipos y accesorios</b> para que armes tu setup a otro nivel.<br>
+      🚀 Calidad, precio y <span class="text-cyan-200 font-bold">entrega inmediata</span> para gamers y creadores.
+    </p>
+
+    <!-- Beneficios animados -->
+    <div class="flex flex-wrap gap-4">
+      <div class="flex items-center gap-2 bg-cyan-700/80 text-white rounded-xl px-4 py-2 shadow animate-pulse">
+        <span class="text-xl">⚡</span> Compra ultra rápida
+      </div>
+      <div class="flex items-center gap-2 bg-lime-600/80 text-white rounded-xl px-4 py-2 shadow animate-bounce">
+        <span class="text-xl">💲</span> Promos exclusivas
+      </div>
+      <div class="flex items-center gap-2 bg-blue-700/80 text-white rounded-xl px-4 py-2 shadow animate-pulse">
+        <span class="text-xl">🚚</span> Envío express
+      </div>
+      <div class="flex items-center gap-2 bg-violet-700/80 text-white rounded-xl px-4 py-2 shadow animate-bounce">
+        <span class="text-xl">🕹️</span> Asesoría gamer
+      </div>
+    </div>
+
+    <!-- Botón y contacto -->
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-4 mt-4">
+      <a routerLink="/productos"
+         class="bg-lime-400 hover:bg-lime-300 text-gray-900 font-bold px-8 py-3 rounded-full shadow-lg text-lg transition animate-pulse">
+        Ver catálogo
+      </a>
+      <div class="flex items-center gap-2 mt-2 md:mt-0">
+        <span class="text-xl">💬</span>
+        <span class="text-cyan-100 text-base">¿Ayuda? Chat disponible</span>
+      </div>
+    </div>
+  </div>
+</div>

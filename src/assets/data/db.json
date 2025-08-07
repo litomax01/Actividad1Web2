@@ -1,78 +1,84 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "admin",
       "email": "admin@correo.com",
       "password": "123456"
+    },
+    {
+      "id": "209b",
+      "nombre": "leonardo",
+      "email": "litomax01@hotmail.com",
+      "password": "litomax"
     }
   ],
   "productos": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Laptop HP Pavilion 15",
       "imagen": "assets/images/laptop-hp.jpg",
       "precio": 850,
       "descripcion": "Laptop HP Pavilion 15, Intel Core i5, 8GB RAM, 512GB SSD."
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Monitor Samsung 24\"",
       "imagen": "assets/images/monitor-samsung.jpg",
       "precio": 220,
       "descripcion": "Monitor Samsung de 24 pulgadas Full HD con panel IPS."
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Teclado Mecánico Logitech G213",
       "imagen": "assets/images/teclado-logitech.jpg",
       "precio": 70,
       "descripcion": "Teclado mecánico con retroiluminación RGB y resistencia a salpicaduras."
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Mouse Inalámbrico Logitech M185",
       "imagen": "assets/images/mouse-logitech.jpg",
       "precio": 25,
       "descripcion": "Mouse inalámbrico compacto y cómodo, ideal para viajes."
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "PC Gamer AMD Ryzen 7",
       "imagen": "assets/images/pc-gamer.jpg",
       "precio": 1250,
       "descripcion": "PC Gamer con procesador AMD Ryzen 7, 16GB RAM, RTX 3060."
     },
     {
-      "id": 6,
+      "id": "6",
       "nombre": "Impresora Multifuncional Epson EcoTank",
       "imagen": "assets/images/monitor-samsung.jpg",
       "precio": 180,
       "descripcion": "Impresora multifuncional, bajo costo de tinta, ideal para oficinas."
     },
     {
-      "id": 7,
+      "id": "7",
       "nombre": "Disco Duro Externo Seagate 1TB",
       "imagen": "assets/images/teclado-logitech.jpg",
       "precio": 55,
       "descripcion": "Disco duro externo portátil, 1TB, USB 3.0, compatible con PC y Mac."
     },
     {
-      "id": 8,
+      "id": "8",
       "nombre": "Cámara Web Logitech C270",
       "imagen": "assets/images/pc-gamer.jpg",
       "precio": 35,
       "descripcion": "Cámara web HD para videollamadas, fácil de instalar."
     },
     {
-      "id": 9,
+      "id": "9",
       "nombre": "Auriculares Redragon H120",
       "imagen": "assets/images/monitor-samsung.jpg",
       "precio": 40,
       "descripcion": "Auriculares para gaming con micrófono ajustable y sonido estéreo."
     },
     {
-      "id": 10,
+      "id": "10",
       "nombre": "Tablet Lenovo Tab M10",
       "imagen": "assets/images/mouse-logitech.jpg",
       "precio": 200,

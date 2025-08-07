@@ -1,58 +1,50 @@
-<nav class="bg-gradient-to-r from-indigo-700 via-blue-700 to-cyan-700 px-6 py-4 shadow-xl rounded-2xl max-w-7xl mx-auto">
-  <div class="flex justify-between items-center">
-    <a href="/" class="text-3xl font-extrabold text-white tracking-wide hover:text-yellow-300 transition">
-      Mi Galería
+<nav class="bg-neutral-900 border-b border-pink-500 shadow-xl">
+  <div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-3">
+    <!-- Logo -->
+    <a routerLink="/home" class="flex items-center gap-2">
+      <span class="text-pink-500 text-2xl md:text-3xl font-extrabold tracking-wide drop-shadow">Mi Galería</span>
     </a>
-
-    <ul class="hidden md:flex space-x-10 font-medium text-white text-lg">
+    <!-- Menú de escritorio -->
+    <ul class="hidden md:flex space-x-8 font-medium text-white text-lg items-center">
       <li>
-        <a routerLink="/home" routerLinkActive="text-yellow-300 underline" [routerLinkActiveOptions]="{ exact: true }" class="hover:text-yellow-400 transition">Home</a>
+        <a routerLink="/home" routerLinkActive="text-pink-400 underline" [routerLinkActiveOptions]="{ exact: true }" class="hover:text-pink-400 transition">Inicio</a>
       </li>
-      <ng-container *ngIf="!usuarioLogueado">
-        <li>
-          <a routerLink="/registro" routerLinkActive="text-yellow-300 underline" class="hover:text-yellow-400 transition">Registro</a>
-        </li>
-        <li>
-          <a routerLink="/login" routerLinkActive="text-yellow-300 underline" class="hover:text-yellow-400 transition">Login</a>
-        </li>
-      </ng-container>
+      <li>
+        <a routerLink="/nosotros" routerLinkActive="text-pink-400 underline" class="hover:text-pink-400 transition">Nosotros</a>
+      </li>
       <li *ngIf="usuarioLogueado">
-        <button (click)="logout()" class="hover:text-yellow-400 transition bg-transparent border-none">Cerrar sesión</button>
+        <a routerLink="/productos" routerLinkActive="text-pink-400 underline" class="hover:text-pink-400 transition">Productos</a>
       </li>
-      <li>
-        <a routerLink="/nosotros" routerLinkActive="text-yellow-300 underline" class="hover:text-yellow-400 transition">Nosotros</a>
+      <li *ngIf="!usuarioLogueado">
+        <a routerLink="/registro" routerLinkActive="text-pink-400 underline" class="hover:text-pink-400 transition">Registro</a>
       </li>
-      <li>
-        <a routerLink="/productos" routerLinkActive="text-yellow-300 underline" class="hover:text-yellow-400 transition">Productos</a>
+      <li *ngIf="!usuarioLogueado">
+        <a routerLink="/login" routerLinkActive="text-pink-400 underline" class="hover:text-pink-400 transition">Login</a>
+      </li>
+      <li *ngIf="usuarioLogueado">
+        <a href="#" (click)="logout()" class="hover:text-pink-400 transition">Cerrar sesión</a>
       </li>
     </ul>
+    <!-- Botón menú móvil -->
     <button
       id="menu-btn"
-      class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white"
+      class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-pink-400 hover:bg-neutral-800 focus:outline-none"
       aria-label="Abrir menú"
       aria-expanded="false"
       (click)="toggleMenu()"
     >
-      <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-        <path
-          class="inline-flex"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
+      <svg class="h-7 w-7" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
   </div>
-
-  <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
-    <a routerLink="/home" routerLinkActive="text-yellow-300 underline" [routerLinkActiveOptions]="{ exact: true }" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Home</a>
-    <ng-container *ngIf="!usuarioLogueado">
-      <a routerLink="/registro" routerLinkActive="text-yellow-300 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Registro</a>
-      <a routerLink="/login" routerLinkActive="text-yellow-300 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Login</a>
-    </ng-container>
-    <a *ngIf="usuarioLogueado" (click)="logout()" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600" style="cursor:pointer;">Cerrar sesión</a>
-    <a routerLink="/nosotros" routerLinkActive="text-yellow-300 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Nosotros</a>
-    <a routerLink="/productos" routerLinkActive="text-yellow-300 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Productos</a>
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3 px-6 pb-4">
+    <a routerLink="/home" routerLinkActive="text-pink-400 underline" [routerLinkActiveOptions]="{ exact: true }" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-neutral-800">Inicio</a>
+    <a routerLink="/nosotros" routerLinkActive="text-pink-400 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-neutral-800">Nosotros</a>
+    <a *ngIf="usuarioLogueado" routerLink="/productos" routerLinkActive="text-pink-400 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-neutral-800">Productos</a>
+    <a *ngIf="!usuarioLogueado" routerLink="/registro" routerLinkActive="text-pink-400 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-neutral-800">Registro</a>
+    <a *ngIf="!usuarioLogueado" routerLink="/login" routerLinkActive="text-pink-400 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-neutral-800">Login</a>
+    <a *ngIf="usuarioLogueado" href="#" (click)="logout()" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-neutral-800">Cerrar sesión</a>
   </div>
 </nav>
