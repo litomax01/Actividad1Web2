@@ -1,0 +1,22 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Registro de Usuario</h2>
+    <form (ngSubmit)="onRegister()" [formGroup]="registerForm">
+      <div class="mb-4">
+        <label class="block mb-1">Nombre</label>
+        <input formControlName="nombre" type="text" class="w-full px-4 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1">Email</label>
+        <input formControlName="email" type="email" class="w-full px-4 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1">Contraseña</label>
+        <input formControlName="password" type="password" class="w-full px-4 py-2 border rounded" />
+      </div>
+      <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded w-full" [disabled]="registerForm.invalid">Registrar</button>
+    </form>
+    <div *ngIf="mensaje" class="text-green-600 mt-4 text-center">{{ mensaje }}</div>
+    <div *ngIf="error" class="text-red-500 mt-4 text-center">{{ error }}</div>
+  </div>
+</div>

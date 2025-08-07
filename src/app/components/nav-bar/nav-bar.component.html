@@ -6,29 +6,24 @@
 
     <ul class="hidden md:flex space-x-10 font-medium text-white text-lg">
       <li>
-        <a
-          routerLink="/home"
-          routerLinkActive="text-yellow-300 underline"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-yellow-400 transition"
-          >Home</a
-        >
+        <a routerLink="/home" routerLinkActive="text-yellow-300 underline" [routerLinkActiveOptions]="{ exact: true }" class="hover:text-yellow-400 transition">Home</a>
+      </li>
+      <ng-container *ngIf="!usuarioLogueado">
+        <li>
+          <a routerLink="/registro" routerLinkActive="text-yellow-300 underline" class="hover:text-yellow-400 transition">Registro</a>
+        </li>
+        <li>
+          <a routerLink="/login" routerLinkActive="text-yellow-300 underline" class="hover:text-yellow-400 transition">Login</a>
+        </li>
+      </ng-container>
+      <li *ngIf="usuarioLogueado">
+        <button (click)="logout()" class="hover:text-yellow-400 transition bg-transparent border-none">Cerrar sesión</button>
       </li>
       <li>
-        <a
-          routerLink="/nosotros"
-          routerLinkActive="text-yellow-300 underline"
-          class="hover:text-yellow-400 transition"
-          >Nosotros</a
-        >
+        <a routerLink="/nosotros" routerLinkActive="text-yellow-300 underline" class="hover:text-yellow-400 transition">Nosotros</a>
       </li>
       <li>
-        <a
-          routerLink="/productos"
-          routerLinkActive="text-yellow-300 underline"
-          class="hover:text-yellow-400 transition"
-          >Productos</a
-        >
+        <a routerLink="/productos" routerLinkActive="text-yellow-300 underline" class="hover:text-yellow-400 transition">Productos</a>
       </li>
     </ul>
     <button
@@ -51,24 +46,13 @@
   </div>
 
   <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
-    <a
-      routerLink="/home"
-      routerLinkActive="text-yellow-300 underline"
-      [routerLinkActiveOptions]="{ exact: true }"
-      class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600"
-      >Home</a
-    >
-    <a
-      routerLink="/nosotros"
-      routerLinkActive="text-yellow-300 underline"
-      class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600"
-      >Nosotros</a
-    >
-    <a
-      routerLink="/productos"
-      routerLinkActive="text-yellow-300 underline"
-      class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600"
-      >Productos</a
-    >
+    <a routerLink="/home" routerLinkActive="text-yellow-300 underline" [routerLinkActiveOptions]="{ exact: true }" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Home</a>
+    <ng-container *ngIf="!usuarioLogueado">
+      <a routerLink="/registro" routerLinkActive="text-yellow-300 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Registro</a>
+      <a routerLink="/login" routerLinkActive="text-yellow-300 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Login</a>
+    </ng-container>
+    <a *ngIf="usuarioLogueado" (click)="logout()" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600" style="cursor:pointer;">Cerrar sesión</a>
+    <a routerLink="/nosotros" routerLinkActive="text-yellow-300 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Nosotros</a>
+    <a routerLink="/productos" routerLinkActive="text-yellow-300 underline" class="block text-white text-lg px-3 py-2 rounded-md hover:bg-indigo-600">Productos</a>
   </div>
 </nav>
