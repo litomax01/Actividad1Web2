@@ -11,6 +11,12 @@
       "nombre": "leonardo",
       "email": "litomax01@hotmail.com",
       "password": "litomax"
+    },
+    {
+      "id": "36e8",
+      "nombre": "antonia",
+      "email": "antonia@hotmail.com",
+      "password": "antonia"
     }
   ],
   "productos": [

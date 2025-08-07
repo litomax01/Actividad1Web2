@@ -27,15 +27,12 @@ export class RegistroComponent {
   onRegister() {
     if (this.registerForm.valid) {
       const { nombre, email, password } = this.registerForm.value;
-
-      // Verifica si el email ya existe antes de registrar
       this.http.get<any[]>(`http://localhost:3000/usuarios?email=${email}`)
         .subscribe(users => {
           if (users.length > 0) {
             this.error = 'El email ya está registrado';
             this.mensaje = '';
           } else {
-            // Registra el usuario
             this.http.post('http://localhost:3000/usuarios', {
               nombre,
               email,
